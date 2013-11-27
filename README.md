@@ -1,3 +1,18 @@
+OASISWORK FORK DISCLAIMER
+==========================
+
+This is a temporary fork, just to be used with oazim lib, waiting for upstream
+pyisimplesoap to include changes, do not rely on it. It will be destroyed then.
+
+Upstream is https://github.com/pysimplesoap/pysimplesoap
+
+This fork includes two patches (and that's all) :
+
+* http://code.google.com/p/pysimplesoap/issues/detail?id=115#c2
+* http://code.google.com/p/pysimplesoap/issues/detail?id=89#c2
+
+Below is the original README
+
 Features
 ========
 
@@ -20,12 +35,12 @@ Using Python 2.7+:
 Using older Python versions:
 
     python -m unittest tests/suite.py
-  
+
 Code coverage:
 
     sudo pip install coverage
     coverage run tests/suite.py
-    coverage report -m 
+    coverage report -m
     coverage html
 
 
