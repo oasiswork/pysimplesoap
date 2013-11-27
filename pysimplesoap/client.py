@@ -176,6 +176,13 @@ class SoapClient(object):
                                         prefix=self.__ns)
 
         request_headers = kwargs.pop('headers', None)
+        request_attributes = kwargs.pop('attributes', None)
+
+        # Attaching request tag attributes (if any)
+        if request_attributes:
+            for k,v in request_attributes.items():
+                getattr(request, method)[k] = v
+
 
         # serialize parameters
         if kwargs:
