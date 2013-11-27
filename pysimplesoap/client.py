@@ -199,7 +199,7 @@ class SoapClient(object):
             use_ns = None if (self.__soap_server == "jetty" or self.qualified is False) else True
             for k, v in parameters:  # dict: tag=valor
                 getattr(request, method).marshall(k, v, ns=use_ns)
-        elif not self.__soap_server in ('oracle',) or self.__soap_server in ('jbossas6',):
+        elif self.__soap_server in ('jbossas6',):
             # JBossAS-6 requires no empty method parameters!
             delattr(request("Body", ns=list(soap_namespaces.values()),), method)
 
